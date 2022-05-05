@@ -27,9 +27,7 @@ div {
   padding: 0rem 3rem;
 
   h1 {
-    color: $color-tertiary;
-    border-bottom: 2px solid $color-secondary;
-    font-size: 3rem;
+    @include exercice-title($color-tertiary, $color-secondary);
     margin-bottom: 2rem;
   }
 
@@ -45,17 +43,16 @@ div {
       display: flex;
       justify-content: center;
       align-items: center;
-      border: 1px solid $color-tertiary;
+      @include article-card(none, $color-tertiary, none);
       height: 15rem;
       padding: 3rem;
 
       p {
-        font-size: 1.6rem;
-        color: $color-secondary;
+        @include article-card($color-secondary, none, 1.6rem);
       }
 
       .red {
-        color: $color-primary;
+        @include article-card($color-primary, none, none);
       }
     }
   }
@@ -74,9 +71,8 @@ div {
       text-align: center;
 
       p {
-          @include article-card($color-tertiary, none, 2.4rem);
+        @include article-card($color-tertiary, none, 2.4rem);
       }
     }
   }
 }
-

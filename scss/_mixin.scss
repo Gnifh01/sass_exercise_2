@@ -3,3 +3,9 @@
     border: 1px solid $border-color;
     font-size: $font;
 }
+
+@mixin exercice-title($color, $border-color, $font:3rem) {
+    color: $color;
+    border-bottom: 2px solid $border-color;
+    font-size: $font;
+}
